@@ -8,7 +8,7 @@ REST API для работы с номенклатурой товаров. Ре�
 
 ### 1. Клонировать репозиторий
 ```bash
-git clone https://github.com/username/nomenclature-api.git
+git clone https://github.com/adecco40/nomenclature_api.git
 cd nomenclature-api
 ```
 
