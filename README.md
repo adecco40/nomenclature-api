@@ -71,7 +71,7 @@ php artisan queue:work rabbitmq --sleep=3 --tries=3 --timeout=60
 {
   "success": true,
   "message": "Описание результата",
-  "data": {},
+  "data": [],
   "timestamp": "2025-09-24T15:36:00+00:00"
 }
 ```
@@ -80,9 +80,11 @@ php artisan queue:work rabbitmq --sleep=3 --tries=3 --timeout=60
 ```json
 {
   "success": false,
-  "message": "Validation error",
-  "errors": {
-    "field": ["Описание ошибки"]
+  "message": "Ошибка валидации",
+  "data": {
+      "name": [
+          "The name field is required."
+      ]
   },
   "timestamp": "2025-09-24T15:36:00+00:00"
 }
@@ -92,4 +94,5 @@ php artisan queue:work rabbitmq --sleep=3 --tries=3 --timeout=60
 ```
 Authorization: Bearer {token}
 ```
+
 
