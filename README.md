@@ -15,7 +15,7 @@
 1. Клонировать репозиторий
 ```bash
 git clone https://github.com/username/nomenclature-api.git
-cd nomenclature-api
+cd nomenclature-api/src/
 ```
 
 2. Создать файл окружения
@@ -92,3 +92,4 @@ php artisan queue:work rabbitmq --sleep=3 --tries=3 --timeout=60
 ```
 Authorization: Bearer {token}
 ```
+
