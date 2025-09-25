@@ -160,6 +160,74 @@
                             ]
                         }
                     }
+                },
+                {
+                    "name": "Upload product image",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "file",
+                                    "type": "file",
+                                    "src": "{{imageFile}}"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/api/products/upload",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "api",
+                                "products",
+                                "upload"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Import products (CSV)",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "file",
+                                    "type": "file",
+                                    "src": "{{csvFile}}"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/api/products/import",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "api",
+                                "products",
+                                "import"
+                            ]
+                        }
+                    }
                 }
             ]
         },
@@ -490,6 +558,14 @@
         {
             "key": "supplierId",
             "value": "uuid-supplier"
+        },
+        {
+            "key": "imageFile",
+            "value": "/absolute/path/to/test-image.jpg"
+        },
+        {
+            "key": "csvFile",
+            "value": "/absolute/path/to/products.csv"
         }
     ]
 }
