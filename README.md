@@ -59,6 +59,8 @@ php artisan queue:work rabbitmq --sleep=3 --tries=3 --timeout=60
 - productId
 - categoryId
 - supplierId
+- imageFile
+- csvFile
 
 Тесты: для всех запросов добавлен глобальный тест проверки формата ответа (`message`, `data`, `timestamp`, `success`).
 
@@ -92,6 +94,7 @@ php artisan queue:work rabbitmq --sleep=3 --tries=3 --timeout=60
 ```
 Authorization: Bearer {token}
 ```
+
 
 
 
